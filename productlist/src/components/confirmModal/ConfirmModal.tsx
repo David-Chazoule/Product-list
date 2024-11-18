@@ -1,9 +1,5 @@
-
-
 function ConfirmModal() {
-  return (
-    <div>ConfirmModal</div>
-  )
+  return <div>ConfirmModal</div>;
 }
 
-export default ConfirmModal
+export default ConfirmModal;

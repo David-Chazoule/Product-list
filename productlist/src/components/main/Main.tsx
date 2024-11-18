@@ -1,9 +1,15 @@
-
+import CardsContainer from "../cardsContainer/CardsContainer";
+import Cart from "../cart/Cart";
 
 function Main() {
   return (
-    <div>Main</div>
-  )
+    <div className="main_container">
+     
+      <CardsContainer />
+
+      <Cart />
+    </div>
+  );
 }
 
-export default Main
+export default Main;
