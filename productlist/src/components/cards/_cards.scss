@@ -76,8 +76,21 @@
         padding: 4px;
         border-radius: 50%;
         cursor: pointer;
+
+        &:hover {
+          background-color: white;
+
+          .icon {
+            fill: $Red;
+          }
+        }
+
         img {
           width: 10px;
+        }
+
+        .icon {
+          fill: white;
         }
       }
     }

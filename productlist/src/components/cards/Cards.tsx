@@ -1,8 +1,9 @@
 import { Dessert } from "../../types/types";
 import IconAdd from "../../styles/icons/icon-add-to-cart.svg";
+import IconIncrement from "../../UI/IconIncrement";
+import IconDecrement from "../../UI/IconDecrement";
 import { useCart } from "../../Context/CartContext";
-import incrementImg from "../../styles/icons/icon-increment-quantity.svg";
-import decrementImg from "../../styles/icons/icon-decrement-quantity.svg";
+
 type CardsProps = {
   item: Dessert;
 };
@@ -42,11 +43,11 @@ function Cards({ item }: CardsProps) {
         {dessertSelected ? (
           <div className="btn-quantity">
             <span onClick={handleDecrement}>
-              <img src={decrementImg} alt="" />
+              <IconDecrement />
             </span>
             <p>{dessertSelected.quantity}</p>
             <span onClick={handleIncrement}>
-              <img src={incrementImg} alt="" />
+              <IconIncrement />
             </span>
           </div>
         ) : (
