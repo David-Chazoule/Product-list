@@ -1,10 +1,11 @@
 .cart {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 60%;
   height: fit-content;
   background-color: $Rose50;
   border-radius: 10px;
+  padding: 20px;
 
   .cart-quantity {
     width: 100%;
@@ -32,6 +33,38 @@
       font-weight: 500;
       font-size: 14px;
       margin: 14px 0;
+    }
+
+    .cart-detail-information {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .card {
+        display: flex;
+        width: 100%;
+
+        .card-detail {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+
+          .title {
+          }
+
+          .price-detail {
+            display: flex;
+          }
+        }
+
+        .btn-delete-box {
+          display: flex;
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+        }
+      }
     }
   }
 }
