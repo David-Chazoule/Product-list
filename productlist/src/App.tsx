@@ -1,11 +1,13 @@
-
-import './App.css';
-import Main from './components/main/Main';
+import "./App.css";
+import Main from "./components/main/Main";
+import { CartProvider } from "./Context/CartContext";
 
 function App() {
   return (
     <div className="App">
-     < Main />
+      <CartProvider>
+        <Main />
+      </CartProvider>
     </div>
   );
 }

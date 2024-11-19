@@ -1,17 +1,66 @@
 import { Dessert } from "../../types/types";
-
+import IconAdd from "../../styles/icons/icon-add-to-cart.svg";
+import { useCart } from "../../Context/CartContext";
+import incrementImg from "../../styles/icons/icon-increment-quantity.svg";
+import decrementImg from "../../styles/icons/icon-decrement-quantity.svg";
 type CardsProps = {
   item: Dessert;
 };
 
 function Cards({ item }: CardsProps) {
+  const { addToCart, cart, increment, decrement, dropFromCart } = useCart();
+
+  const handleAddToCart = () => {
+    addToCart(item);
+  };
+
+  const dessertSelected = cart.find(
+    (Selectitem) => Selectitem.name === item.name
+  );
+
+  const handleIncrement = () => {
+    if (dessertSelected) {
+      increment(dessertSelected);
+    }
+  };
+
+  const handleDecrement = () => {
+    if (dessertSelected) {
+      if (dessertSelected.quantity > 1) {
+        decrement(dessertSelected);
+      } else {
+        dropFromCart(dessertSelected.name);
+      }
+    }
+  };
+
+  console.log(cart);
   return (
     <div className="card_container">
-      <img className="img" src={`${item.image.desktop}`} alt={item.name} />
+      <div className="img-container">
+        <img className="img" src={`${item.image.desktop}`} alt={item.name} />
+        {dessertSelected ? (
+          <div className="btn-quantity">
+            <span onClick={handleDecrement}>
+              <img src={decrementImg} alt="" />
+            </span>
+            <p>{dessertSelected.quantity}</p>
+            <span onClick={handleIncrement}>
+              <img src={incrementImg} alt="" />
+            </span>
+          </div>
+        ) : (
+          <div className="btn-add" onClick={handleAddToCart}>
+            <img src={IconAdd} alt="" />
+            <p>Add to Cart</p>
+          </div>
+        )}
+      </div>
+
       <div className="info_container">
-        <h4>{item.category}</h4>
-        <h3>{item.name}</h3>
-        <h5>${item.price}</h5>
+        <h5>{item.category}</h5>
+        <h4>{item.name}</h4>
+        <p>${item.price.toFixed(2)}</p>
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import CardsContainer from "../cardsContainer/CardsContainer";
-import Cart from "../cart/Cart";
+
+import CartContainer from "../cartContainer/CartContainer";
 
 function Main() {
   return (
@@ -7,7 +8,7 @@ function Main() {
      
       <CardsContainer />
 
-      <Cart />
+      <CartContainer />
     </div>
   );
 }
