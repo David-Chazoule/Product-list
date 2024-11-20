@@ -35,7 +35,6 @@ function Cards({ item }: CardsProps) {
     }
   };
 
-  console.log(cart);
   return (
     <div className="card_container">
       <div className="img-container">
