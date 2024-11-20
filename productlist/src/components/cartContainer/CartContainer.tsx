@@ -1,9 +1,13 @@
 import Cart from "../cart/Cart";
 
-function CartContainer() {
+type CartContainerProps = {
+  setModal: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+function CartContainer({ setModal }: CartContainerProps) {
   return (
     <div className="cart-container">
-      <Cart />
+      <Cart setModal={setModal} />
     </div>
   );
 }

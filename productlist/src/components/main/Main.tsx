@@ -2,13 +2,16 @@ import CardsContainer from "../cardsContainer/CardsContainer";
 
 import CartContainer from "../cartContainer/CartContainer";
 
-function Main() {
+type MainProps = {
+  setModal: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+function Main({ setModal }: MainProps) {
   return (
     <div className="main_container">
-     
       <CardsContainer />
 
-      <CartContainer />
+      <CartContainer setModal={setModal} />
     </div>
   );
 }

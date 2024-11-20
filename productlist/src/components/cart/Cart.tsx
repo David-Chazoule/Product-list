@@ -3,7 +3,11 @@ import { useCart } from "../../Context/CartContext";
 import carbone from "../../styles/icons/icon-carbon-neutral.svg";
 import IconRemove from "../../UI/IconRemove";
 
-function Cart() {
+type CartProps = {
+  setModal: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+function Cart({ setModal }: CartProps) {
   const { cart, dropFromCart } = useCart();
   const total = cart.reduce(
     (curr, next) => curr + next.price * next.quantity,
@@ -13,7 +17,7 @@ function Cart() {
   return (
     <div className="cart">
       <div className="cart-quantity">
-        <h2>Your Cart (0)</h2>
+        <h2>Your Cart ({cart ? cart.length : "0"})</h2>
       </div>
 
       <div className="cart-detail">
@@ -58,7 +62,7 @@ function Cart() {
                 </p>
               </div>
               <div className="confirm-btn-box">
-                <button>Confirm Order</button>
+                <button onClick={() => setModal(true)}>Confirm Order</button>
               </div>
             </div>
           </div>

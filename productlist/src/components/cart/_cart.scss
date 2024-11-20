@@ -1,8 +1,7 @@
 .cart {
   display: flex;
   flex-direction: column;
-
-  width: 70%;
+  width: 66%;
   height: fit-content;
   background-color: $Rose50;
   border-radius: 10px;
@@ -67,9 +66,6 @@
                 margin: 0;
                 font-weight: 500;
               }
-            }
-
-            .title {
             }
 
             .price-detail {

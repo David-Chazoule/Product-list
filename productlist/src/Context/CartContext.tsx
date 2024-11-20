@@ -5,6 +5,9 @@ type CartItem = {
   name: string;
   price: number;
   quantity: number;
+  image: {
+    thumbnail: string;
+  };
 };
 
 type CartContextType = {
@@ -13,6 +16,7 @@ type CartContextType = {
   increment: (item: CartItem) => void;
   decrement: (item: CartItem) => void;
   dropFromCart: (name: string) => void;
+  newOrder: () => void;
 };
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -48,9 +52,13 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     setCart(cart.filter((item) => item.name !== name));
   }
 
+  function newOrder() {
+    setCart([]);
+  }
+
   return (
     <CartContext.Provider
-      value={{ cart, addToCart, increment, decrement, dropFromCart }}
+      value={{ cart, addToCart, increment, decrement, dropFromCart, newOrder }}
     >
       {children}
     </CartContext.Provider>
