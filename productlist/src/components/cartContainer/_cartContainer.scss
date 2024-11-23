@@ -1,4 +1,15 @@
-.cart-container{
+.cart-container {
   display: flex;
   width: 40%;
+
+  //tablet
+  @media screen and (max-width: 1170px) {
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 700px) {
+    width: 100%;
+  }
 }

@@ -1,5 +1,4 @@
 import CardsContainer from "../cardsContainer/CardsContainer";
-
 import CartContainer from "../cartContainer/CartContainer";
 
 type MainProps = {
@@ -8,10 +7,15 @@ type MainProps = {
 
 function Main({ setModal }: MainProps) {
   return (
-    <div className="main_container">
-      <CardsContainer />
+    <div className="Dessert">
+      <div className="title-page">
+        <h1>Desserts</h1>
+      </div>
+      <div className="main_container">
+        <CardsContainer />
 
-      <CartContainer setModal={setModal} />
+        <CartContainer setModal={setModal} />
+      </div>
     </div>
   );
 }

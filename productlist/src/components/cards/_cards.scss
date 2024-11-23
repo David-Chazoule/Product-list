@@ -5,6 +5,17 @@
   justify-content: center;
   width: 270px;
   margin: 20px;
+  font-family: $fontRedhat;
+
+  //tablet
+  @media screen and (max-width: 1170px) {
+    width: 200px;
+  }
+
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    margin: 6px 10px;
+  }
 
   .img-container {
     display: flex;
@@ -17,6 +28,39 @@
     img {
       width: 100%;
       border-radius: 10px;
+
+      //tablet
+      @media screen and (max-width: 1170px) {
+        display: none;
+      }
+    }
+
+    .imgTablet {
+      display: none;
+      width: 100%;
+      border-radius: 10px;
+      //tablet
+      @media screen and (max-width: 1170px) {
+        display: flex;
+      }
+
+      @media screen and (max-width: 700px) {
+        display: none;
+      }
+    }
+
+    .imgMobile {
+      display: none;
+      width: 100%;
+      border-radius: 10px;
+
+      @media screen and (max-width: 700px) {
+        display: flex;
+      }
+    }
+
+    .selected {
+      border: 2px solid $Red;
     }
 
     .btn-add {

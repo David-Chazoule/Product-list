@@ -38,7 +38,21 @@ function Cards({ item }: CardsProps) {
   return (
     <div className="card_container">
       <div className="img-container">
-        <img className="img" src={`${item.image.desktop}`} alt={item.name} />
+        <img
+          className={`img ${dessertSelected ? "selected" : ""}`}
+          src={`${item.image.desktop}`}
+          alt={item.name}
+        />
+        <img
+          className={`imgTablet ${dessertSelected ? "selected" : ""}`}
+          src={`${item.image.tablet}`}
+          alt={item.name}
+        />
+        <img
+          className={`imgMobile ${dessertSelected ? "selected" : ""}`}
+          src={`${item.image.mobile}`}
+          alt={item.name}
+        />
         {dessertSelected ? (
           <div className="btn-quantity">
             <span onClick={handleDecrement}>
