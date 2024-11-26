@@ -50,7 +50,7 @@ function ConfirmModal({ setModal }: ModalProps) {
             </div>
           ))}
           <div className="total-price">
-            <p>Order Total</p> <h2>${total}</h2>
+            <p>Order Total</p> <h2>${total.toFixed(2)}</h2>
           </div>
         </div>
         <div className="btn-container">
