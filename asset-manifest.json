@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Product-list/static/css/main.f1c0305a.css",
+    "main.js": "/Product-list/static/js/main.8aa515d2.js",
+    "static/js/453.8785d31d.chunk.js": "/Product-list/static/js/453.8785d31d.chunk.js",
+    "static/media/RedHatText-Regular.ttf": "/Product-list/static/media/RedHatText-Regular.1114e0c17a9d15f2014a.ttf",
+    "static/media/RedHatText-Bold.ttf": "/Product-list/static/media/RedHatText-Bold.710fa6829252d684327b.ttf",
+    "static/media/illustration-empty-cart.svg": "/Product-list/static/media/illustration-empty-cart.c2bca079754e885ead5da25eb67b468e.svg",
+    "static/media/icon-order-confirmed.svg": "/Product-list/static/media/icon-order-confirmed.13c71f684bda7569ca1696eb63bce688.svg",
+    "index.html": "/Product-list/index.html",
+    "static/media/icon-carbon-neutral.svg": "/Product-list/static/media/icon-carbon-neutral.13953e5e1e4c166b4acd1fb7ead600c5.svg",
+    "static/media/icon-add-to-cart.svg": "/Product-list/static/media/icon-add-to-cart.12141fdf0da9c38c6421fe087a5b5125.svg",
+    "main.f1c0305a.css.map": "/Product-list/static/css/main.f1c0305a.css.map",
+    "main.8aa515d2.js.map": "/Product-list/static/js/main.8aa515d2.js.map",
+    "453.8785d31d.chunk.js.map": "/Product-list/static/js/453.8785d31d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f1c0305a.css",
+    "static/js/main.8aa515d2.js"
+  ]
+}
