@@ -12,6 +12,5 @@ export interface Dessert {
 
 export type DessertData = {
   desserts: Dessert[];
-  loading: boolean;
   error: string | null;
 };

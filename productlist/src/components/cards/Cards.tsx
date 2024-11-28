@@ -11,25 +11,30 @@ type CardsProps = {
 function Cards({ item }: CardsProps) {
   const { addToCart, cart, increment, decrement, dropFromCart } = useCart();
 
+  // Handler to add the item to the cart
   const handleAddToCart = () => {
     addToCart(item);
   };
 
+  // Check if the current item is already in the cart
   const dessertSelected = cart.find(
     (Selectitem) => Selectitem.name === item.name
   );
 
+  // Handler to increment the quantity of the selected item
   const handleIncrement = () => {
     if (dessertSelected) {
       increment(dessertSelected);
     }
   };
 
+  // Handler to decrement the quantity or remove the item from the cart
   const handleDecrement = () => {
     if (dessertSelected) {
       if (dessertSelected.quantity > 1) {
         decrement(dessertSelected);
       } else {
+        // Otherwise, remove the item from the cart
         dropFromCart(dessertSelected.name);
       }
     }

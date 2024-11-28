@@ -24,10 +24,12 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 export const CartProvider = ({ children }: { children: ReactNode }) => {
   const [cart, setCart] = useState<CartItem[]>([]);
 
+  // Adds a new product to the cart with an initial quantity of 1.
   function addToCart(product: Dessert) {
     setCart([...cart, { ...product, quantity: 1 }]);
   }
 
+  // Increases the quantity of a product already in the cart.
   function increment(product: CartItem) {
     setCart(
       cart.map((item) =>
@@ -38,6 +40,8 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     );
   }
 
+  // Decreases the quantity of a product in the cart.
+  // If the product's name matches, decrement its quantity. Otherwise, return the item unchanged.
   function decrement(product: CartItem) {
     setCart(
       cart.map((item) =>
@@ -48,10 +52,12 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     );
   }
 
+  // Removes a product from the cart based on its name.
   function dropFromCart(name: string) {
     setCart(cart.filter((item) => item.name !== name));
   }
 
+  // Clears the cart to prepare for a new order.
   function newOrder() {
     setCart([]);
   }

@@ -10,13 +10,17 @@ function ConfirmModal({ setModal }: ModalProps) {
 
   const handleNewOrder = () => {
     newOrder();
+    // Calls the function to clear the current cart and prepare for a new order.
     setModal(false);
+    // Closes the modal by updating the parent state.
   };
 
+  // Calculates the total cost of all items in the cart.
   const total = cart.reduce(
     (curr, next) => curr + next.price * next.quantity,
     0
   );
+
   return (
     <div className="modal-container">
       <div className="modal-card">
